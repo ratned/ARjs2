@@ -11,13 +11,23 @@
     <a-scene embedded arjs>
         <!-- Menggunakan a-marker sehingga objek berada relatif terhadap marker -->
         <a-marker preset="hiro">
+            <!-- Objek bebek -->
             <a-entity
               gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Duck/glTF/Duck.gltf"
-              scale="0.5 0.5 0.5"
+              scale="0.1 0.1 0.1"
               position="0 0 0"
               rotation="0 0 0">
             </a-entity>
+
+            <!-- Objek pinguin, berhadapan dengan bebek -->
+            <a-entity
+              gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Penguin/glTF/Penguin.gltf"
+              scale="0.5 0.5 0.5"
+              position="0 0 -1"
+              rotation="0 180 0">
+            </a-entity>
         </a-marker>
+
         <!-- Entity kamera untuk menampilkan AR -->
         <a-entity camera></a-entity>
     </a-scene>
